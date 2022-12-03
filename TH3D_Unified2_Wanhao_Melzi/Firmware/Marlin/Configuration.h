@@ -17,13 +17,13 @@
 //===========================================================================
 // **************   WANHAO PRINTERS W/MELZI BOARD (1284P)    ****************
 //===========================================================================
-//#define WANHAO_I3
+#define WANHAO_I3
 
 // If your HOTEND thermistor temperatures are off please uncomment the 10K option below to fix temps being off
-//#define WANHAO_10K_THERMISTOR
+#define WANHAO_10K_THERMISTOR
 
 // If your BED thermistor temperatures are off please uncomment the 10K option below to fix temps being off
-//#define WANHAO_10K_BED_THERMISTOR
+#define WANHAO_10K_BED_THERMISTOR
 
 // If you are using our EZOut V2 (connects to LCD header) filament sensor kit please follow the install guide
 // and then uncomment the #define EZOUT_ENABLE line below. Installs the same as an Ender 3 in the guide.
@@ -173,8 +173,8 @@
 //#define FAN_FIX
 
 // Use your own printer name - Uncomment both lines
-//#define CUSTOM_PRINTER_NAME
-//#define USER_PRINTER_NAME "CHANGE ME"
+#define CUSTOM_PRINTER_NAME
+#define USER_PRINTER_NAME "ESSRIG 3D"
 
 // If your printer is homing to the endstops hard uncomment this to change the homing speed/divisor to make it less aggressive.
 //#define SLOWER_HOMING
