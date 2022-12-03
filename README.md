@@ -17,7 +17,10 @@ Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infil
 
 # Printing
 
-## Preparation
+## Leveling the bed
+Step 21 on page 14 of the manual explains the process. However, the printer has round knobs instead of wingnuts. The marlin firmware has a `Bed Tramming` feature, under the `Motion` menu, that moves the nozzle towards the 4 corners, then the center; so it's not done with the printer off. It is recommended to preheat hot end and bed to temperatures you plan on printing at first.
+
+## Other Preparation
 Clean bed with isopropyl alcohol. Mist a little hair spray on the bed, if prints don't stick.
 
 ## From SD
