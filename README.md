@@ -10,10 +10,18 @@ Monoprice Maker Select V2, which is equivalent to a Wanhao Duplicator i3 v2.
 At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultimaker.com/software/ultimaker-cura) 5.2.1 was used.
 
 ### Installation
-Hillsborough County Schools computers are locked down, and can't run the installer. Instead download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand, Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
+Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
 
 ### Slicing
-Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, 'Printing Temperature` and any other settings. Insert microSD card, ...
+Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, 'Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
+
+# Printing
+
+## Preparation
+Clean bed with isopropyl alcohol. Mist a little hair spray on the bed, if prints don't stick.
+
+## From SD
+Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button. Pay close attention to the first layers. If necessary, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
 
 # Hardware
 Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://www.amazon.com/dp/B088W8WMTB?ref_=cm_sw_r_cp_ud_dp_VCW0HAEW99HP4Y2WK0T2)
@@ -122,5 +130,6 @@ Printed filament:669.16m Printing time:8 days 13 hours 51 min
 ```
 
 # References
-[Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf)
+[Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf), however, anything related to the screen and firmware will not be accurate. Ultimaker Cura 5.2.1 is much different than the "pre-Ultimaker?" 15.04.2 version that is in the manual.
+[Marlin Firmware](https://marlinfw.org/)
 
