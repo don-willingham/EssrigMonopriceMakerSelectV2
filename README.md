@@ -130,6 +130,7 @@ Printed filament:669.16m Printing time:8 days 13 hours 51 min
 ```
 
 # References
-[Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf), however, anything related to the screen and firmware will not be accurate. Ultimaker Cura 5.2.1 is much different than the "pre-Ultimaker?" 15.04.2 version that is in the manual.
-[Marlin Firmware](https://marlinfw.org/)
+
+* [Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf), however, anything related to the screen and firmware will not be accurate. Ultimaker Cura 5.2.1 is much different than the "pre-Ultimaker?" 15.04.2 version that is in the manual.
+* [Marlin Firmware](https://marlinfw.org/)
 
