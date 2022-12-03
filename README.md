@@ -17,7 +17,7 @@ The original Repetier 0.91 was replaced with [TH3D's Unified 2 Firmware for Wanh
 
 ## New Settings
 An attempt was made to retain all relevant settings:
-
+```
 >>> M503
 SENDING:M503
 echo:; Linear Units:
@@ -41,10 +41,12 @@ echo:; Hotend PID:
 echo:  M301 P19.16 I1.09 D83.97
 echo:; Filament load/unload:
 echo:  M603 L20.00 U20.00 ; (mm)
+```
 
 ## Old Settings
 The original firmware had the following settings:
 
+```
 >>> M205
 SENDING:M205
 ok 0
@@ -110,6 +112,7 @@ Free RAM:10732
 ok 0
 FIRMWARE_NAME:Repetier_0.91 FIRMWARE_URL:https://github.com/repetier/Repetier-Firmware/ PROTOCOL_VERSION:1.0 MACHINE_TYPE:Mendel EXTRUDER_COUNT:1 REPETIER_PROTOCOL:2
 Printed filament:669.16m Printing time:8 days 13 hours 51 min
+```
 
 # References
 [Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf)
