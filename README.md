@@ -7,13 +7,20 @@ Monoprice Maker Select V2, which is equivalent to a Wanhao Duplicator i3 v2.
 # Software
 
 ## Cura
-TBD
+At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultimaker.com/software/ultimaker-cura) 5.2.1 was used.
+
+### Installation
+Hillsborough County Schools computers are locked down, and can't run the installer. Instead download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand, Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
+
+### Slicing
+Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, 'Printing Temperature` and any other settings. Insert microSD card, ...
 
 # Hardware
-TBD
+Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://www.amazon.com/dp/B088W8WMTB?ref_=cm_sw_r_cp_ud_dp_VCW0HAEW99HP4Y2WK0T2)
+
 
 # Firmware
-The original Repetier 0.91 was replaced with [TH3D's Unified 2 Firmware for Wanhao/Monoprice “Melzi” Boards](https://support.th3dstudio.com/download/unified-2-firmware-for-wanhao-melzi-boards/), which is based on Marlin 2.52. At first it was configured with just WANHAO_I3, but also needed WANHAO_10K_THERMISTOR and WANHAO_10K_BED_THERMISTOR. The printer name and boot screen have also been customized.
+The original Repetier 0.91 was replaced with [TH3D's Unified 2 Firmware for Wanhao/Monoprice “Melzi” Boards](https://support.th3dstudio.com/download/unified-2-firmware-for-wanhao-melzi-boards/), which is based on Marlin 2.52. At first it was configured with just `WANHAO_I3`, but also needed `WANHAO_10K_THERMISTOR` and `WANHAO_10K_BED_THERMISTOR`. The printer name and boot screen have also been customized.
 
 ## New Settings
 An attempt was made to retain all relevant settings:
