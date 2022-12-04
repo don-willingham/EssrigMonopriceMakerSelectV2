@@ -24,7 +24,7 @@ Printer takes 1.75 mm filament. PLA is easiest to print with. ABS is recommened 
 Step 21 on page 14 of the manual explains the process. However, the printer has round knobs instead of wingnuts. The marlin firmware has a `Bed Tramming` feature, under the `Motion` menu, that moves the nozzle towards the 4 corners, then the center; so it's not done with the printer off. It is recommended to preheat hot end and bed to temperatures you plan on printing at first.
 
 ## Other Preparation
-Clean bed with isopropyl alcohol. Mist a little hair spray on the bed, if prints don't stick.
+Clean bed with isopropyl alcohol. If prints don't stick, try to mist a little hair spray on the bed.
 
 ## From SD
 Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button. Pay close attention to the first layers. If necessary, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
