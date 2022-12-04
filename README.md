@@ -13,7 +13,7 @@ At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultima
 Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
 
 ### Slicing
-Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, 'Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
+Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
 
 # Printing
 
