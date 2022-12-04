@@ -18,7 +18,7 @@ Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infil
 # Printing
 
 ## Filament
-Printer takes 1.75 mm filament. PLA is easiest to print with. ABS is recommened to print with an enclosure. Flexible TPU should be possible. Filament shelf life varies, moisture causes it to become brittle. Filament should be stored in an air tight container, with dessicant. Something like [Eva-dry E-333 Renewable dehumidifier, Pack of 1, White Sand](https://www.amazon.com/Improved-Eva-dry-333-Renewable-Dehumidifier/dp/B000H0XFCS/ref=asc_df_B000H0XFCS/?tag=hyprod-20&linkCode=df0&hvadid=167123712426&hvpos=&hvnetw=g&hvrand=12790151131147388792&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9012113&hvtargid=pla-175638461812&psc=1) can be plugged in, and "recharged" (dried out).
+Printer takes 1.75 mm filament. PLA is easiest to print with. ABS is recommened to print with an enclosure. Flexible TPU should be possible. Filament shelf life varies, moisture causes it to become brittle and break. It could possible lead to other printing problems. Filament should be stored in an air tight container with dessicant. Something like [Eva-dry E-333 Renewable dehumidifier, Pack of 1, White Sand](https://amzn.to/3FqfGYl) can be plugged in, and "recharged" (dried out).
 
 ## Leveling the bed
 Step 21 on page 14 of the manual explains the process. However, the printer has round knobs instead of wingnuts. The marlin firmware has a `Bed Tramming` feature, under the `Motion` menu, that moves the nozzle towards the 4 corners, then the center; so it's not done with the printer off. It is recommended to preheat hot end and bed to temperatures you plan on printing at first.
@@ -30,8 +30,7 @@ Clean bed with isopropyl alcohol. Mist a little hair spray on the bed, if prints
 Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button. Pay close attention to the first layers. If necessary, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
 
 # Hardware
-Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://www.amazon.com/dp/B088W8WMTB?ref_=cm_sw_r_cp_ud_dp_VCW0HAEW99HP4Y2WK0T2)
-
+Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://amzn.to/3VRegM0).
 
 # Firmware
 The original Repetier 0.91 was replaced with [TH3D's Unified 2 Firmware for Wanhao/Monoprice “Melzi” Boards](https://support.th3dstudio.com/download/unified-2-firmware-for-wanhao-melzi-boards/), which is based on Marlin 2.52. At first it was configured with just `WANHAO_I3`, but also needed `WANHAO_10K_THERMISTOR` and `WANHAO_10K_BED_THERMISTOR`. The printer name and boot screen have also been customized.
