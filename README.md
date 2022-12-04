@@ -7,17 +7,37 @@ Monoprice Maker Select V2, which is equivalent to a Wanhao Duplicator i3 v2.
 # Software
 
 ## Cura
-TBD
+At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultimaker.com/software/ultimaker-cura) 5.2.1 was used.
+
+### Installation
+Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
+
+### Slicing
+Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
+
+# Printing
+
+## Filament
+Printer takes 1.75 mm filament. PLA is easiest to print with. ABS is recommened to print with an enclosure. Flexible TPU should be possible. Filament shelf life varies, moisture causes it to become brittle and break. It could possible lead to other printing problems. Filament should be stored in an air tight container with dessicant. Something like [Eva-dry E-333 Renewable dehumidifier, Pack of 1, White Sand](https://amzn.to/3FqfGYl) can be plugged in, and "recharged" (dried out).
+
+## Leveling the bed
+Step 21 on page 14 of the manual explains the process. However, the printer has round knobs instead of wingnuts. The marlin firmware has a `Bed Tramming` feature, under the `Motion` menu, that moves the nozzle towards the 4 corners, then the center; so it's not done with the printer off. It is recommended to preheat hot end and bed to temperatures you plan on printing at first.
+
+## Other Preparation
+Clean bed with isopropyl alcohol. If prints don't stick, try to mist a little hair spray on the bed.
+
+## From SD
+Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button. Pay close attention to the first layers. If necessary, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
 
 # Hardware
-TBD
+Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://amzn.to/3VRegM0).
 
 # Firmware
-The original Repetier 0.91 was replaced with [TH3D's Unified 2 Firmware for Wanhao/Monoprice “Melzi” Boards](https://support.th3dstudio.com/download/unified-2-firmware-for-wanhao-melzi-boards/), which is based on Marlin 2.52. At first it was configured with just WANHAO_I3, but also needed WANHAO_10K_THERMISTOR and WANHAO_10K_BED_THERMISTOR. The printer name and boot screen have also been customized.
+The original Repetier 0.91 was replaced with [TH3D's Unified 2 Firmware for Wanhao/Monoprice “Melzi” Boards](https://support.th3dstudio.com/download/unified-2-firmware-for-wanhao-melzi-boards/), which is based on Marlin 2.52. At first it was configured with just `WANHAO_I3`, but also needed `WANHAO_10K_THERMISTOR` and `WANHAO_10K_BED_THERMISTOR`. The printer name and boot screen have also been customized.
 
 ## New Settings
 An attempt was made to retain all relevant settings:
-
+```
 >>> M503
 SENDING:M503
 echo:; Linear Units:
@@ -38,13 +58,15 @@ echo:; Material heatup parameters:
 echo:  M145 S0 H200.00 B60.00 F0
 echo:  M145 S1 H240.00 B100.00 F0
 echo:; Hotend PID:
-echo:  M301 P19.16 I1.09 D83.97
+echo:  M301 P22.07 I1.28 D95.37
 echo:; Filament load/unload:
 echo:  M603 L20.00 U20.00 ; (mm)
+```
 
 ## Old Settings
 The original firmware had the following settings:
 
+```
 >>> M205
 SENDING:M205
 ok 0
@@ -110,7 +132,10 @@ Free RAM:10732
 ok 0
 FIRMWARE_NAME:Repetier_0.91 FIRMWARE_URL:https://github.com/repetier/Repetier-Firmware/ PROTOCOL_VERSION:1.0 MACHINE_TYPE:Mendel EXTRUDER_COUNT:1 REPETIER_PROTOCOL:2
 Printed filament:669.16m Printing time:8 days 13 hours 51 min
+```
 
 # References
-[Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf)
+
+* [Manual](https://downloads.monoprice.com/files/manuals/13860_Manual_151111.pdf), however, anything related to the screen and firmware will not be accurate. Ultimaker Cura 5.2.1 is much different than the "pre-Ultimaker?" 15.04.2 version that is in the manual.
+* [Marlin Firmware](https://marlinfw.org/)
 
