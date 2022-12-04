@@ -59,7 +59,7 @@ echo:; Material heatup parameters:
 echo:  M145 S0 H200.00 B60.00 F0
 echo:  M145 S1 H240.00 B100.00 F0
 echo:; Hotend PID:
-echo:  M301 P19.16 I1.09 D83.97
+echo:  M301 P22.07 I1.28 D95.37
 echo:; Filament load/unload:
 echo:  M603 L20.00 U20.00 ; (mm)
 ```
