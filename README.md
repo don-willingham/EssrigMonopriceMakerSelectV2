@@ -12,9 +12,6 @@ At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultima
 ### Installation
 Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
 
-### Slicing
-Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
-
 # Printing
 
 ## Filament
@@ -26,8 +23,17 @@ Step 21 on page 14 of the manual explains the process. However, the printer has 
 ## Other Preparation
 Clean bed with isopropyl alcohol. If prints don't stick, try to mist a little hair spray on the bed.
 
-## From SD
-Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button. Pay close attention to the first layers. If necessary, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
+### Slicing to SD card
+Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
+
+## Printing from SD card
+Ensure [PC](PC_Setup.md) to printer USB cable is disconnected. Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button.
+
+## Slicing to OctoPrint
+Ensure PC to printer USB cable is connected. Ensure Cura is not running. Connect to OctoPrint via http://127.0.0.1:5000/. If prompted to Log in, the username is essrig. Click Connect button. LCD display on printer may display the boot screen. Close any Printer reset detected in the top right hand corner. In Cura, select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings.
+
+## When Printing
+Pay close attention to the first layers. If necessary, on the printer's main menu, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
 
 # Hardware
 Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://amzn.to/3VRegM0).
