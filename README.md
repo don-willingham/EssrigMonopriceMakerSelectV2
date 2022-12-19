@@ -10,10 +10,7 @@ Monoprice Maker Select V2, which is equivalent to a Wanhao Duplicator i3 v2.
 At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultimaker.com/software/ultimaker-cura) 5.2.1 was used.
 
 ### Installation
-Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
-
-### Slicing
-Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
+Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`. The [PC](PC_Setup.md)'s Cura has the USB serial interface disabled. Selected Marketplace, then Gear, scrolled down to USB Printing, selected Disable. Restarted Cura.
 
 # Printing
 
@@ -21,13 +18,22 @@ Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infil
 Printer takes 1.75 mm filament. PLA is easiest to print with. ABS is recommened to print with an enclosure. Flexible TPU should be possible. Filament shelf life varies, moisture causes it to become brittle and break. It could possible lead to other printing problems. Filament should be stored in an air tight container with dessicant. Something like [Eva-dry E-333 Renewable dehumidifier, Pack of 1, White Sand](https://amzn.to/3FqfGYl) can be plugged in, and "recharged" (dried out).
 
 ## Leveling the bed
-Step 21 on page 14 of the manual explains the process. However, the printer has round knobs instead of wingnuts. The marlin firmware has a `Bed Tramming` feature, under the `Motion` menu, that moves the nozzle towards the 4 corners, then the center; so it's not done with the printer off. It is recommended to preheat hot end and bed to temperatures you plan on printing at first.
+Step 21 on page 14 of the manual explains the process. However, the printer has round knobs instead of wingnuts. The aftermarket Marlin firmware has a `Bed Tramming` feature, under the `Motion` menu, that moves the nozzle towards the 4 corners, then the center. Step 18 of the manual has the printer off, however, metal expands when hot, so it is actually recommended to preheat hot end and bed to temperatures you plan on printing when tramming/leveling.
 
 ## Other Preparation
 Clean bed with isopropyl alcohol. If prints don't stick, try to mist a little hair spray on the bed.
 
-## From SD
-Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button. Pay close attention to the first layers. If necessary, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
+### Slicing to SD card
+Select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings. If printer is on, select `Release SD` from main menu. Remove microSD card from printer. Insert microSD card to adapter, and adapter into computer. (Ensure any lock switch is not selected) Select `Slice`, `Save to Removable ...`, then `Eject`.
+
+## Printing from SD card
+Ensure [PC](PC_Setup.md) to printer USB cable is disconnected. Insert microSD card with gcode on it. Press the button, scroll down to `Print from SD`, you man need to scroll down to `Refresh`, then select your file, and press button.
+
+## Slicing to OctoPrint
+Ensure PC to printer USB cable is connected. Connect to OctoPrint via http://127.0.0.1:5000/. If prompted to Log in, the username is essrig. Click Connect button. LCD display on printer may display the boot screen. Close any Printer reset detected in the top right hand corner. In Cura, select `File`, and `Open File(s)...`, select an .stl file. Set `Profile`, `Infill Density`, `Printing Temperature` and any other settings.
+
+## When Printing
+Pay close attention to the first layers. If necessary, on the printer's main menu, select `Tune` and `Babystep Z`, then turn the knob to adjust the nozzle height. Plus is up, minus is down.
 
 # Hardware
 Z axis limit switch was replaced with a [Micro Limit Switch, CYT1073 AC 2A 125V 3Pin SPDT Rocker Switches Long Hinge Lever for Arduino (30 Pack) by MUZHI](https://amzn.to/3VRegM0).

@@ -1,0 +1,8 @@
+<service>
+  <id>octoprint</id>
+  <name>OctoPrint</name>
+  <description>This service runs OctoPrint 3d printer management system.</description>
+  <executable>C:\OctoPrint\Scripts\octoprint</executable>
+  <arguments>serve</arguments>
+  <log mode="roll"></log>
+</service>
