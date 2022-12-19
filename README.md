@@ -10,7 +10,7 @@ Monoprice Maker Select V2, which is equivalent to a Wanhao Duplicator i3 v2.
 At the time of writing [Ultimaker](https://ultimaker.com/) [Cura](https://ultimaker.com/software/ultimaker-cura) 5.2.1 was used.
 
 ### Installation
-Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`.
+Hillsborough County Schools computers are locked down, and can't run the installer. Download [Ultimaker-Cura-5.2.1-win64.exe](https://github.com/Ultimaker/Cura/releases/download/5.2.1/Ultimaker-Cura-5.2.1-win64.exe) and extract the contents with [7zip](https://www.7-zip.org/). Copy to microUSB card, or thumb drive. Insert card/drive and run `Ultimaker-Cura-5.2.1-win64\Ultimaker-Cura.exe`. Select `Settings` -> `Printer` -> `Manage Printers...`. Select `Add New`. Expand `Add a non-networked printer`. Scroll down to, and expand `Wanhao`. Select `Wanhao Duplicator i3`, and change Printer Name to `EssrigMPMSv2`. Under Preset printers, select `EssrigMPMSv2`. The PC has the USB serial interface disabled. Selected Marketplace, then Gear, scrolled down to USB Printing, selected Disable. Restarted Cura.
 
 # Printing
 
